@@ -1,0 +1,28 @@
+{
+  "name": "WundergroundApp",
+  "version": "1.0.0",
+  "description": "Make calls to the Wunderground API",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies":{
+    "grunt": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*"
+    },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/McPhelpsius/WundergroundApp"
+  },
+  "keywords": [
+    "wunderground",
+    "API",
+    "JavaScript"
+  ],
+  "author": "Nathan Phelps",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/McPhelpsius/WundergroundApp/issues"
+  }
+}
