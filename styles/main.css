@@ -1,13 +1,21 @@
 body {
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   margin: 0;
-  padding: 0;
-  background-size: cover; }
+  padding: 0; }
   body.clear {
     background: url("../img/sunny.jpg") no-repeat top center;
     background-size: cover; }
   body.overcast, body.mostly.cloudy, body.partly.cloudy {
     background: url("../img/mostlycloudy.jpg") no-repeat top center;
+    background-size: cover; }
+  body.cloudy {
+    background: url("../img/cloudy.jpg") no-repeat top center;
+    background-size: cover; }
+  body.rain {
+    background: url("../img/rain.jpg") no-repeat top center;
+    background-size: cover; }
+  body.snow {
+    background: url("../img/snow.jpg") no-repeat top center;
     background-size: cover; }
 
 .strip-defaults, input[type="submit"] {
@@ -27,13 +35,15 @@ body {
 #loader-overlay {
   display: none;
   position: absolute;
+  z-index: 500;
   width: 100%;
   height: 100%;
   background: url("../img/circle_loader.gif") no-repeat center center;
-  background-color: rgba(250, 250, 250, 0.9); }
+  background-color: rgba(250, 250, 250, 0.7); }
 
 input[type="submit"] {
-  font-family: "Raleway", "Helvetica", "Arial", sans-serif; }
+  font-family: "Raleway", "Helvetica", "Arial", sans-serif;
+  margin-top: 1rem; }
 input[type="text"] {
   height: 2rem;
   width: 30%;
@@ -43,7 +53,7 @@ input[type="text"] {
 #submitZipcode {
   position: absolute;
   width: 100%;
-  top: 40%;
+  top: 50%;
   right: 0;
   left: 0;
   margin: auto;
@@ -54,7 +64,10 @@ input[type="text"] {
   margin: auto;
   text-align: center; }
   #forecast li {
-    display: inline-block; }
+    display: inline-block;
+    margin: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0 2rem 1rem; }
 
 .high {
   color: #B61810;
@@ -65,5 +78,17 @@ input[type="text"] {
   color: #101F56;
   font-weight: 500;
   font-size: 1.5rem; }
+
+.error {
+  width: auto;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin: 0 auto;
+  width: 40%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 20%; }
 
 /*# sourceMappingURL=main.css.map */

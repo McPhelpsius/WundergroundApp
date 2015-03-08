@@ -16,7 +16,7 @@
 
 		<!-- input zipcode and submit to wunderground -->
 		<form id="submitZipcode">
-			<input id="zip" type="text" name="zipcode">
+			<input id="zip" type="text" name="zipcode"><br>
 			<input type="submit" value="Get Your Forecast!">
 		</form>
 
@@ -36,7 +36,7 @@
 			<ul id="forecast">
 			{{#each forecastday}}
 				<li>
-					<h1>{{date.monthname}} {{date.day}}, {{date.year}}</h1>
+					<h3>{{date.monthname}} {{date.day}}, {{date.year}}</h3>
 					<img src="{{icon_url}}">
 					<div><span class="high">{{high.fahrenheit}}</span>/<span class="low">{{low.fahrenheit}}</span></div>
 				</li>
@@ -46,7 +46,7 @@
 
 		<!-- Template used if error data returns instead of a forecast -->
 		<script id="error-display" type="text/x-handlebars-template">
-			<div>
+			<div class="error">
 				<p>{{error.description}}</p>
 			</div>
 		</script>
