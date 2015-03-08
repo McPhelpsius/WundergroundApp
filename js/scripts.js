@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+	Handlebars.registerHelper('ThreeDays', function(period, options) {
+	  if (period < 4){
+	  	return options.fn(this);
+	  } else{
+	  	return;
+	  }
+	})
+
 	var forecastTemplateSource = document.getElementById('forecast-display').innerHTML,
 		forecastTemplate = Handlebars.compile(forecastTemplateSource),
 		errorTemplateSource = document.getElementById('error-display').innerHTML,

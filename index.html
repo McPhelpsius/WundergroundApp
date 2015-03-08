@@ -35,11 +35,13 @@
 		<script id="forecast-display" type="text/x-handlebars-template">
 			<ul id="forecast">
 			{{#each forecastday}}
+				{{#ThreeDays period}}
 				<li>
 					<h3>{{date.monthname}} {{date.day}}, {{date.year}}</h3>
 					<img src="{{icon_url}}">
 					<div><span class="high">{{high.fahrenheit}}</span>/<span class="low">{{low.fahrenheit}}</span></div>
 				</li>
+				{{/ThreeDays}}
 			{{/each}}
 			</ul>
 		</script>
